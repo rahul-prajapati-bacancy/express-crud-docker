@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-node-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: my-node-api
+  template:
+    metadata:
+      labels:
+        app: my-node-api
+    spec:
+      containers:
+        - name: my-node-api
+          image: rahulatbacancy/rahul-docker-registry:express-crud
+          ports:
+            - containerPort: 3003

@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use('/api', itemRoutes);
 
 app.get('/', (req, res) => {
-    res.status(200).json({ health: true })
+    res.status(400).json({ health: false })
 })
 
 app.listen(PORT, () => {
